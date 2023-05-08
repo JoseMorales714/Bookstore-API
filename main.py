@@ -1,18 +1,17 @@
 from fastapi import FastAPI
-
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from BaseModel import book
 
 app = FastAPI()
 
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request, exc):
+    return JSONResponse(
+        status_code=422,
+        content={"message": "Validation Error", "detail": exc.errors()}
+    )
 
-@app.get("/")
-def index(): return {"name: “First Data"}
-
-
-
-
-
-def main():
-    print("Hello World!")
-
-if __name__ == "__main__":
-    main()
+@app.post("/books/")
+async def create_book(BaseModel: book):
+    return {"message": "Book created successfully"}

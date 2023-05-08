@@ -1,9 +1,8 @@
-from typing import Optional
 from pydantic import BaseModel
 
-class Book(BaseModel):
+class book(BaseModel):
     title: str
     author: str
-    description: Optional[str]
+    description: str
     price: float
     stock: int
