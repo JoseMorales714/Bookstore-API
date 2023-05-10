@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>All Books</title>
+</head>
+<body>
+    <h1>All Books</h1>
+    <ul>
+    {% for book in books %}
+        <li><a href="{{ url_for('get_book', book_id=book.id) }}">{{ book.title }}</a> by {{ book.author }}</li>
+    {% else %}
+        <li>No books found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
