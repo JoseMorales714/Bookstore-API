@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Book</title>
+  </head>
+  <body>
+    <h1>Update Book</h1>
+    <form method="POST" action="/books/{{ book.id }}">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" value="{{ book.title }}"><br>
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" value="{{ book.author }}"><br>
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" value="{{ book.description }}"><br>
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" value="{{ book.price }}"><br>
+      <label for="stock">Stock</label>
+      <input type="number" id="stock" name="stock" value="{{ book.stock }}"><br>
+      <input type="submit" value="Update Book">
+    </form>
+  </body>
+</html>
