@@ -64,9 +64,13 @@ async def update_book(book_id: str, book: Book):
     """
     Update a book by ID
     """
-    updated_book = await db.books.find_one_and_replace({"_id": ObjectId(book_id)}, book.dict())
-    if not updated_book:
-        raise HTTPException(status_code=404, detail="Book not found")
+    try:
+        updated_book = await db.books.find_one_and_replace({"_id": ObjectId(book_id)}, book.dict())
+        return templates.TemplateResponse("book.html", {"request": request, "book": updated_book})
+        if not updated_book:
+            raise HTTPException(status_code=404, detail="Book not found")
+    except ValueError as e:
+        return JSONResponse(status_code=400, content={"message": str(e)})    
     return {"message": "Book updated successfully"}
 
 # API endpoint to delete a book from the store by ID
@@ -75,9 +79,13 @@ async def delete_book(book_id: str):
     """
     Delete a book by ID
     """
-    deleted_book = await db.books.find_one_and_delete({"_id": ObjectId(book_id)})
-    if not deleted_book:
-        raise HTTPException(status_code=404, detail="Book not found")
+    try:
+        deleted_book = await db.books.find_one_and_delete({"_id": ObjectId(book_id)})
+        if not deleted_book:
+            raise HTTPException(status_code=404, detail="Book not found")
+        return RedirectResponse(url="/books")
+    except ValueError as e:
+        return JSONResponse(status_code=400, content={"message": str(e)})
     return {"message": "Book deleted successfully"}
 
 # API endpoint to search for books by title, author, and price range
