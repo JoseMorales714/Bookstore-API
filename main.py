@@ -60,7 +60,7 @@ async def get_book(book_id: str):
 
 # API endpoint to update an existing book by ID
 @app.put("/books/{book_id}")
-async def update_book(book_id: str, book: Book):
+async def update(book_id: str, book: Book):
     """
     Update a book by ID
     """
@@ -75,7 +75,7 @@ async def update_book(book_id: str, book: Book):
 
 # API endpoint to delete a book from the store by ID
 @app.delete("/books/{book_id}")
-async def delete_book(book_id: str):
+async def delete(book_id: str):
     """
     Delete a book by ID
     """
