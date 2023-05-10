@@ -66,9 +66,9 @@ async def update_book(book_id: str, book: Book):
     """
     try:
         updated_book = await db.books.find_one_and_replace({"_id": ObjectId(book_id)}, book.dict())
-        return templates.TemplateResponse("book.html", {"request": request, "book": updated_book})
-        if not updated_book:
+         if not updated_book:
             raise HTTPException(status_code=404, detail="Book not found")
+        return RedirectResponse(url=f"/books/{book_id}")
     except ValueError as e:
         return JSONResponse(status_code=400, content={"message": str(e)})    
     return {"message": "Book updated successfully"}
@@ -83,7 +83,7 @@ async def delete_book(book_id: str):
         deleted_book = await db.books.find_one_and_delete({"_id": ObjectId(book_id)})
         if not deleted_book:
             raise HTTPException(status_code=404, detail="Book not found")
-        return RedirectResponse(url="/books")
+        return RedirectResponse(url="/index.html")
     except ValueError as e:
         return JSONResponse(status_code=400, content={"message": str(e)})
     return {"message": "Book deleted successfully"}
