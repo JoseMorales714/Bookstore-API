@@ -6,3 +6,4 @@ class Book(BaseModel):
     description: str
     price: float
     stock: int
+    sold:  int 
