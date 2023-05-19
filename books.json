@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "64667099bffb1a0e5d8e79fc"
+  },
+  "title": "THE SUBTLE ART OF NOT GIVING A F*CK",
+  "author": "MARK MANSON",
+  "description": "Finding something important and meaningful in your life is the most productive use of your time and energy.",
+  "price": 23.99,
+  "stock": 8,
+  "sold": 12
+},{
+  "_id": {
+    "$oid": "646671f5bffb1a0e5d8e79fd"
+  },
+  "title": "Everything Is F*cked",
+  "author": "MARK MANSON",
+  "description": "Mark Manson's Everything is F*cked is a book about hope and much, much more. Manson takes the reader into existentialist territory by first reflecting on what hope is and its relationship to meaning, and then expertly painting a picture of how hope fits into the world we live in today.",
+  "price": 18.99,
+  "stock": 12,
+  "sold": 23
+},{
+  "_id": {
+    "$oid": "64667303bffb1a0e5d8e79fe"
+  },
+  "title": "Models: Attract Women Through Honesty",
+  "author": "MARK MANSON",
+  "description": "You can become irresistibly attractive to women without changing who you are. So says Mark Manson",
+  "price": 12.99,
+  "stock": 20,
+  "sold": 15
+},{
+  "_id": {
+    "$oid": "64668111bffb1a0e5d8e79ff"
+  },
+  "title": "Rich Dad Poor Dad",
+  "author": "Robert T. Kiyosak",
+  "description": "It advocates the importance of financial literacy, financial independence and building wealth through investing in assets, real estate investing, starting and owning businesses, as well as increasing one's financial intelligence",
+  "price": 7.69,
+  "stock": 30,
+  "sold": 20
+},{
+  "_id": {
+    "$oid": "64668274bffb1a0e5d8e7a01"
+  },
+  "title": "Think and Grow Rich",
+  "author": "Napoleon Hill",
+  "description": "by combining the brain power of two or more people to solve problems, the result is more than the sum of its parts.",
+  "price": 8.5,
+  "stock": 5,
+  "sold": 40
+},{
+  "_id": {
+    "$oid": "64668487bffb1a0e5d8e7a02"
+  },
+  "title": "The Go-Giver",
+  "author": "Bob Burg",
+  "description": "Imparted with wit and grace, The Go-Giver is a heartwarming and inspiring tale that brings new relevance to the old proverb “Give and you shall receive.”",
+  "price": 13.5,
+  "stock": 10,
+  "sold": 22
+},{
+  "_id": {
+    "$oid": "646685b2bffb1a0e5d8e7a03"
+  },
+  "title": "The 21 Irrefutable Laws of Leadership",
+  "author": "John C. Maxwell",
+  "description": "Discover the life-changing principles of Influence, Empowerment, Intuition, Respect, and Legacy that will transform your leadership—and your life",
+  "price": 18.69,
+  "stock": 0,
+  "sold": 25
+},{
+  "_id": {
+    "$oid": "6466863cbffb1a0e5d8e7a04"
+  },
+  "title": "The Richest Man in Babylon",
+  "author": " George Samuel Clason",
+  "description": "The parables are told by a fictional Babylonian character called Arkad, a poor scribe who became the richest man in Babylon",
+  "price": 5.99,
+  "stock": 10,
+  "sold": 31
+}]
